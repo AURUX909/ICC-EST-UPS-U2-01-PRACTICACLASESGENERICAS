@@ -42,13 +42,11 @@ README.md: Este es mi archivo.
 El siguiente ejemplo muestra cómo usar el sistema para crear activos digitales, validarlos y realizar una compra.
 
 Código Principal (Main.java)
-
 public class Main {
     public static void main(String[] args) {
         ServicioValidacion validador = new ServicioValidacion();
         MercadoDigital<ArteDigital> mercadoArte = new MercadoDigital<>(validador);
         MercadoDigital<MusicaDigital> mercadoMusica = new MercadoDigital<>(validador);
-        
         try {
             ArteDigital arte = new ArteDigital("ART1", "Paisaje Retro", 1080, "pixel", 100.0);
             mercadoArte.listarActivo(arte);
